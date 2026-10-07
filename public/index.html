@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskly — Challenge 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="auth-card" id="authView">
+      <div class="brand">TASKLY</div>
+      <h1>Your tasks, your space.</h1>
+      <p class="sub">Challenge 3 · Full-stack to-do list</p>
+      <div class="tabs"><button class="tab active" data-mode="login">Login</button><button class="tab" data-mode="register">Register</button></div>
+      <form id="authForm">
+        <label>Username<input id="username" autocomplete="username" required minlength="3"></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required minlength="8"></label>
+        <button class="primary" type="submit" id="authSubmit">Login</button>
+        <p class="error" id="authError"></p>
+      </form>
+    </section>
+
+    <section class="app" id="appView" hidden>
+      <header class="topbar"><div><div class="brand">TASKLY</div><h1 id="hello"></h1></div><button class="ghost" id="logout">Log out</button></header>
+      <form class="add" id="taskForm"><input id="taskTitle" maxlength="200" placeholder="What needs to be done?" required><button class="primary" type="submit">Add task</button></form>
+      <div class="list-head"><span id="count">0 tasks</span><span>Only your tasks are shown</span></div>
+      <ul id="tasks"></ul>
+      <p class="error" id="taskError"></p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
